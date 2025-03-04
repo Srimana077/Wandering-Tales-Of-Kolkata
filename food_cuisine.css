@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    
+}
+header .logo {
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+}
+/* for menu button */
+.navbar-toggler {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+/* to open a side pannel */
+.openbtn {
+    position: absolute;
+    right: 75px;
+    top: 50px;
+    display: flex;
+    font-size: 300%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+/* to make the button hover while opening */
+.openbtn:hover {
+    transition: 0.25s;
+    font-size: 375%;
+    color:rgb(255, 255, 255);
+}
+/* sidepanel */
+.sidepanel  {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    width: 0;
+    height: 0;
+    background-image:  url("books-3022392_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.25s;
+    margin-top: 25px;
+    
+} 
+/* items in sidepanel */
+.items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+   
+}
+/*.items {
+   width: 250px; 
+}
+/* to make the the items anchor to other pages */
+.items a {
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* to malke items hover */
+.items a:hover {
+    color: #ac536d;
+    text-decoration: none;
+}
+/* to close side panel */
+.sidepanel .closebtn {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 25px;
+    right: 75px;
+    font-size: 300%;
+    background-color: transparent;
+} 
+/* to make the button hover while closing */
+.closebtn:hover {
+    color: rgb(255, 255, 255);
+    font-size: 375%;
+    transition: 0.25s;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+
+
+/* ///////////..utility classes../////////// */
+
+.container {
+  /*max-width: 1200px;*/
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #16a083;
+}
+
+.btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+/* ............/navbar/............ *
+
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  /*box-shadow: 0px 5px 10px 0px #aaa;*/
+  position: fixed;
+  width: 100%;
+  /*background: #fff;*/
+  color: #000;
+  
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+.showcase-area {
+    height: 50vh;
+    background: 
+      url("Perakir Payesh _ Experiences of a Gastronomad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+  }
+  
+  .main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    color:white
+  }
+  .showcase-container p{
+    color: white;
+  }
+  .about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+
+.container{
+    width: 100%;
+    height: 600px;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow:wrap;
+ }
+
+ .box1{
+    width: 650px;
+    height:400px;
+    background: white;
+    margin-top: 100px;
+    margin-left: -10px;
+    font-size: 18px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .box2{
+    width: 650px;
+    height:400px;
+    background: white;
+    margin-top: 100px;
+    margin-left: -10px;
+    font-size: 18px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ /*.box2 p{
+/*position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+ }*/
+
+ .CopyrightText {
+    position: absolute;
+    left: 85px;
+    z-index: 4;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  .CopyrightText b {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .seg1 {
+    position: absolute;
+    left: 450px;
+    padding-bottom: 35px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.seg1 li {
+    list-style: none;
+    /*word-wrap: ;*/
+    
+}
+
+.seg1 li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+.aus:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.cui:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.pla:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.seg2 {
+    position: absolute;
+    left: 900px;
+    padding-bottom: 35px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.seg2 li {
+    list-style: none;
+    /*word-wrap: ;*/
+    
+}
+
+.seg2 li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+.con:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.ter:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.pri:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+
+  /* for social links */
+  .sci {
+    position: absolute;
+    right: 85px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .sci li {
+    list-style: none;
+    /*word-wrap: ;*/
+    
+  }
+  /* for social links to anchor other pages */
+  .sci li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.75em;
+  }
+  .fb:hover {
+    transition: 0.25s;
+    font-size: 300%;
+  }
+  .insta:hover {
+    transition: 0.25s;
+    font-size: 300%;
+  }.twit:hover {
+    transition: 0.25s;
+    font-size: 300%;
+  }
+  @media(max-width:768px) {
+    .openbtn {
+        right: 20px;
+        color: #000;
+    }
+    .sidepanel {
+       width: 0;
+    }
+    .items {
+        margin-right: 200px;
+        margin-bottom: 400px;
+    }
+    .items a {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .sidepanel .closebtn {
+        right: 220px;
+    }
+   
+    .CopyrightText {
+        left: 20px;
+        
+    }
+    .sci {
+        right: 20px;
+        
+    }
+  }
+  
