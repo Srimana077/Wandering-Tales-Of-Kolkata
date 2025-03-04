@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10000;
+    
+}
+header .logo {
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+}
+/* for menu button */
+.navbar-toggler {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+/* to open a side pannel */
+.openbtn {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    display: flex;
+    font-size: 300%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+/* to make the button hover while opening */
+.openbtn:hover {
+    transition: 0.25s;
+    font-size: 375%;
+    color:rgb(255, 255, 255);
+}
+/* sidepanel */
+.sidepanel  {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    width: 0;
+    height: 0;
+    background-image:  url("books-3022392_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.25s;
+    
+} 
+/* items in sidepanel */
+.items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+   
+}
+/*.items {
+   width: 250px; 
+}
+/* to make the the items anchor to other pages */
+.items a {
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* to malke items hover */
+.items a:hover {
+    color: #ac536d;
+    text-decoration: none;
+}
+/* to close side panel */
+.sidepanel .closebtn {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 25px;
+    right: 75px;
+    font-size: 300%;
+    background-color: transparent;
+} 
+/* to make the button hover while closing */
+.closebtn:hover {
+    color: rgb(255, 255, 255);
+    font-size: 375%;
+    transition: 0.25s;
+}
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* for body background */
+.main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main h3 {
+    position: relative;
+    z-index: 3;
+    font-size: 3.5vw;
+    color: #fff;
+    text-shadow: 0 20px 30px rgba(255, 255, 255, 0.2);
+}
+
+
+
+.CopyrightText {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    z-index: 4;
+    font-size: 20px;
+    color: white;
+}
+.CopyrightText b {
+    font-size: 25px;
+    font-weight: bolder;
+}
+/* for social links */
+.sci {
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.sci li {
+    list-style: none;
+    /*word-wrap: ;*/
+    
+}
+/* for social links to anchor other pages */
+.sci li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.75em;
+}
+/*.fb:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.insta:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.twit:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}*/
+@media(max-width:768px) {
+    .openbtn {
+        right: 20px;
+    }
+    .items a {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .sidepanel .closebtn {
+        right: 20px;
+    }
+    .CopyrightText {
+        left: 25px;
+        bottom: 50px;
+    }
+    .CopyrightText b {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .sci {
+        right: 33px;
+        bottom: 20px;
+    }
+    .sci li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+    }
+}
