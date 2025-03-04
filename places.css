@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 'poppins', sans-serif;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+header.logo {
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.navbar-toggler {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+.openbtn {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    display: flex;
+    font-size: 300%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.openbtn:hover {
+    color: white;
+    transition: 0.25s;
+    font-size: 375%;
+}
+.sidepanel  {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    width: 0;
+    background-image:  url("books-3022392_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.25s;
+  
+    
+} 
+/* items in sidepanel */
+.items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    margin-top: 50px;
+}
+/*.items {
+   width: 250px; 
+}
+/* to make the the items anchor to other pages */
+.items a {
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* to malke items hover */
+.items a:hover {
+    color: #ac536d;
+    text-decoration: none;
+}
+/* to close side panel */
+.sidepanel .closebtn {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 25px;
+    right: 100px;
+    font-size: 300%;
+    background-color: transparent;
+} 
+/* to make the button hover while closing */
+.closebtn:hover {
+    color: rgb(255, 255, 255);
+    font-size: 375%;
+    transition: 0.25s;
+}
+
+  .mains input:hover {
+      transition-duration: 0.5s;
+      background-color: rgb(255, 255, 255);
+      z-index: 4;
+  }
+  .contents {
+     position: absolute;
+  }
+  
+
+    
+/* Jumbotrom */
+
+.background {
+	position: relative;
+}
+
+.background .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.background .container h1 {
+	color: #FFF;
+	font-size: 5em;
+	line-height: 105%;
+	margin-bottom: 0;
+	text-align: center;
+    padding-top: 100px;
+}
+
+.background .container h2 {
+	color: #FFF;
+	font-size: 3em;
+	line-height: 105%;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.background .container p {
+	margin-top: 0;
+	color: #FFF;
+	text-align: center;
+}
+
+.jumbotron {
+	background: linear-gradient( to bottom, 
+		rgba(0,0,0, .2),
+		rgba(0,0,0,.3)),
+        url('Victoria-Memorial-Kolkata-5.jpg');
+	height: 600px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	margin-top: 0;
+}
+
+/* Section About*/
+.sectionAbout {
+	margin-bottom: 50px;
+}
+
+.sectionAbout h1 {
+	margin-bottom: 30px; 
+}
+.serviceBox{
+	margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+        
+        /*=============================Banner=============================*/
+.banner {
+    background-image: url("Victoria-Memorial-Kolkata-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*overflow: hidden;*/
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    /*background-size: 100%;*/
+}
+
+.banner-text-item {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-heading {
+    flex: 1;
+}
+
+.banner-heading h1 {
+    font-size: 100px;
+    font-weight: normal;
+    color: #2bdbee;
+    font-family: Satisfy;
+}
+
+.banner-text-item .form {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 70%;
+    padding: 1% 2%;
+}
+
+.banner-text-item input,
+.banner-text-item .date,
+.banner-text-item .book {
+    padding: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+}
+
+.banner-text-item input {
+    width: 50%;
+    flex: 2;
+}
+
+.banner-text-item .date {
+    width: 20%;
+    flex: 1;
+}
+
+.banner-text-item .book {
+    width: 20%;
+    flex: 1;
+}
+
+.banner-text-item .book {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #2ffdfa;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Barlow Condensed";
+    width: 20%;
+}
+.header{
+    margin-top:8vh;
+    padding-bottom: 5vh;
+  text-align:  center;
+  }
+  .pallete{
+    margin-top:10vh;
+    display:flex;
+    flex-direction:row;
+    margin-left:10vh;
+    margin-right:10vh;
+  }
+  .pallete i{
+    font-size: 10vh;
+  }
+  .item{
+    margin-left:auto;
+    margin-right:auto;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2.5vh;
+    color: #4169E1;  
+  }
+  .itemhead{
+    font-size: 1.2rem;
+    padding:1rem;
+  }
+  .itemabout{
+    text-align:center;
+  }
+  .activities{
+    margin-top:10vh;
+    display:flex;
+    flex-direction:row;
+    padding-left:10vh;
+    padding-right:10vh;
+  }
+  .activities1{
+    margin-top:10vh;
+    display:flex;
+    flex-direction:row;
+    padding-left:10vh;
+    padding-right:10vh;
+  }
+  .acpic{
+    width:50%;
+  }
+  .acpic1{
+     width:50%;
+    padding-left:10vh;
+    padding-top:2vh;
+  }
+  .acinfo{
+    width:50%;
+    padding-left:10vh;
+    padding-top:1.5vh;
+  }
+  .acinfo   p{
+    color: rgb(21, 20, 20);
+        font-family:Arial,  sans-serif ;
+        font-size: 180%;
+        padding-top: 60px;
+      }
+
+
+  
+  .acinfo1{
+    width:50%;
+    margin-top:2.5vh;
+  }
+  .acinfo1  p{
+    color: rgb(21, 20, 20);
+        font-family:Arial,  sans-serif ;
+        font-size: 180%;
+        padding-top: 60px;
+      }
+  
+  .acpic img{
+    height:49vh; 
+    width: 80vh;
+    border-radius:5px;
+  }
+  .acpic1 img{
+    height:49vh;
+    width: 80vh;
+ border-radius:5px;
+  }
+  
+  .button {
+    background-color: rgb(12, 224, 243);
+    color:rgb(26, 28, 28);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 40px;
+    transition:transform .4s;
+  }
+  
+  .button:focus,
+  .button:hover {
+    transform: scale(1.2)
+  }
+
+
+.CopyrightText {
+    position: absolute;
+    left:  100px; ; 
+    top: 11020px;
+    display: flex;
+    flex-direction: row;
+}
+
+.CopyrightText b {
+    font-size: 25px;
+    font-weight: bolder; 
+}
+
+.seg1 {
+    position: absolute;
+    left: 450px;
+    top: 11000px;
+    display: flex;
+    flex-direction: column;
+}
+.seg1 li {
+    list-style: none;
+    /*word-wrap: ;*/
+}
+
+.seg1 li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+
+/*.aus:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.cui:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.pla:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}*/
+
+.seg2 {
+    position: absolute;
+    left: 900px;
+    top: 11000px;
+    display: flex;
+    flex-direction: column;
+}
+.seg2 li {
+    list-style: none;
+    /*word-wrap: ;*/    
+}
+
+.seg2 li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+/*.con:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.ter:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.pri:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}*/
+
+
+/* for social links */
+.sci {
+    position: absolute;
+    right:  100px;  
+    top: 11000px;
+    bottom: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.sci li {
+    list-style: none;
+    /*word-wrap: ;*/
+    
+}
+/* for social links to anchor other pages */
+.sci li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.75em;
+}
+/*.fb:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}
+.insta:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}.twit:hover {
+    transition: 0.25s;
+    font-size: 300%;
+}*/
+@media(max-width:768px) {
+    .openbtn {
+        right: 20px;
+    }
+    .items a {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .sidepanel .closebtn {
+        right: 20px;
+    }
+    .CopyrightText {
+        left: 25px;
+        bottom: 50px;
+    }
+    .CopyrightText b {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .sci {
+        right: 33px;
+        bottom: 20px;
+    }
+    .sci li a {
+        text-decoration: none;
+        color: rgb(239, 168, 168);
+        font-size: 1.5em;
+    }
+}
+
+
